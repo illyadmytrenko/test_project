@@ -1,0 +1,8 @@
+<header class='header'>
+  <button (click)='login("user@deepersignals.com", "password")'>Log in as user</button>
+  <button (click)='login("admin@deepersignals.com", "password")'>Log in as admin</button>
+  <button (click)=logout()>Log out</button>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

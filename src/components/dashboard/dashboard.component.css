@@ -1,0 +1,109 @@
+.assessments {
+}
+
+.assessments_heading {
+   font-size: 24px;
+   font-weight: 600;
+   text-align: center;
+}
+
+.assessments_list {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 30px;
+   margin-top: 20px;
+   align-items: flex-end;
+   justify-content: center;
+}
+
+.assessments_item {
+   display: flex;
+   flex: 0 1 25%;
+   height: auto;
+}
+
+.assessments_reports,
+.assessments_graph {
+   flex: 1 1 auto;
+}
+
+.assessments_reports {
+   margin-right: 30px;
+   /* min-width: 300px; */
+}
+
+.assessments_text {
+}
+
+.assessments_image {
+   margin-top: 5px;
+   flex: 1 1 auto;
+}
+
+.assessments_image img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.disabled {
+   display: none;
+}
+
+#graph {
+   opacity: 0; 
+   animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+#graph.fadeOut {
+   animation: fadeOut 1.5s ease forwards;
+}
+
+@keyframes fadeOut {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+.block {
+   display: block;
+}
+
+.max {
+   max-width: 400px;
+}
+
+.cursor {
+   cursor: pointer;
+}
+
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 992px) {
+   .assessments_item {
+      flex: 0 1 50%;
+      display: block;
+   }
+
+   .assessment_graph {
+      margin-top: 20px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .assessments_item {
+      flex: 0 1 100%;
+   }
+}

@@ -1,0 +1,14 @@
+<div *ngIf='assessments' class='assessments'>
+   <h2 class='assessments_heading'>Assessment Reports</h2>
+   <ul class='assessments_list' [class.block]='isUserToken'>
+     <li *ngFor='let assessment of assessments' class='assessments_item'>
+         <div class="assessments_reports" [class.max]='isUserToken' (click)='handleGraph()' [class.cursor]='isUserToken'>
+            <p class='assessments_text'>{{ assessment.name }} - {{ assessment.users_resolved }} resolved users</p>
+            <div class='assessments_image'>
+               <img [src]='assessment.image_url' alt=''>
+            </div>
+         </div>
+         <app-graph id='graph' class='disabled assessment_graph' [assessmentId]='assessment.id' *ngIf='isUserToken'></app-graph>
+      </li>
+   </ul>
+</div>
